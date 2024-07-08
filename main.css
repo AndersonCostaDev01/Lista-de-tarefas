@@ -1,0 +1,163 @@
+:root { 
+    /* Base de cores do sistema */
+    --color-white: rgb(255, 255, 255);
+    --color-purple: rgb(95, 39, 205);
+    --color-purple2: rgb(77, 15, 201);
+    --color-gray: rgb(131, 131, 131);
+    --color-gray2: rgb(200, 214, 229);
+    --color-gray3: rgba(0, 0, 0, 0.7);
+    --color-green: rgb(0, 105, 35);
+    --color-red: rgb(255, 0, 0);
+    --color-dark: rgb(0, 0, 0);
+    --color-dark2: rgb(11, 0, 14);
+    --color-dark3: rgb(22, 22, 22); 
+}
+
+body {
+    /* Estilização do corpo da página */
+    font-family: "Lato", sans-serif; /* Fonte padrão */
+    background-color: var(--color-dark); /* Cor de fundo escura */
+    color: var(--color-white); /* Cor do texto branca */
+    display: flex; /* Define o layout flexível */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 4rem; /* Espaçamento entre os itens */
+}
+
+header {
+    /* Formata o cabeçalho */
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header button {
+    /* Estilização do botão de confirmação */
+    border: none; /* Remove a borda */
+    background-color: var(--color-green); /* Cor de fundo */
+    color: var(--color-white); /* Cor do texto branca */
+    font-size: 2rem; /* Tamanho da fonte */
+    padding: .4rem .8rem; /* Espaçamento interno */
+    border-radius: 50%; /* Borda arredondada em forma de círculo */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex; /* Define o layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: 400ms; /* Transição suave */
+}
+
+header button:hover {
+    background-color: var(--color-gray);
+}
+
+header img {
+    height: 3rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.content {
+    /* Estilização da seção de conteúdo */
+    display: none; /* Oculta o conteúdo por padrão */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 4rem; /* Espaçamento entre os itens */
+}
+
+.content-add-item {
+    /* Estilização da seção para adicionar itens */
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 1rem; /* Espaçamento entre os itens */
+}
+
+#new-task,
+#btn-confirm,
+#btn-cancel {
+    /* Estilização dos campos de entrada e botão de nova tarefa */
+    border: none; /* Remove a borda */
+    font-size: 1rem; /* Tamanho da fonte */
+    outline: none; /* Remove o contorno */
+    padding: 1rem; /* Espaçamento interno */
+}
+
+#new-task {
+    /* Estilização específica para os campos de entrada */
+    width: 15rem; /* Largura dos campos */
+    border-radius: 1rem; /* Borda arredondada */
+}
+
+button {
+    border: none; /* Remove a borda */
+    background-color: var(--color-red); /* Cor de fundo vermelha */
+    color: var(--color-white); /* Cor do texto branca */
+    font-size: 2rem; /* Tamanho da fonte */
+    padding: .4rem .8rem; /* Espaçamento interno */
+    border-radius: 50%; /* Borda arredondada em forma de círculo */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex; /* Define o layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: 400ms; /* Transição suave */
+}
+
+#btn-confirm {
+    background-color: var(--color-green);
+}
+
+#to-do-list {
+    /* Estilização da lista de tarefas */
+    display: flex; /* Define o layout flexível */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 1rem; /* Espaçamento entre os itens */
+    padding: 0; /* Remove o espaçamento interno */
+}
+
+#to-do-list li {
+    /* Estilização dos itens da lista de tarefas */
+    list-style-type: none; /* Remove o estilo de lista padrão */
+    font-size: 1.4rem; /* Tamanho da fonte */
+    text-transform: capitalize; /* Capitaliza o texto */
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    width: 10rem; /* Define o tamanho da lista */
+}
+
+#to-do-list li:hover {
+    /* Estilização dos itens da lista de tarefas ao passar o cursor */
+    background-color: var(--color-dark3); /* Cor de fundo ao passar o cursor */
+    transition: 400ms; /* Transição suave */
+    border-radius: 1rem; /* Borda arredondada */
+    padding-left: 1rem; /* Espaçamento interno à esquerda */
+}
+
+#btn-ok {
+    /* Estilização do botão de confirmação */
+    border: none; /* Remove a borda */
+    background-color: var(--color-red); /* Cor de fundo vermelha */
+    color: var(--color-white); /* Cor do texto branca */
+    font-size: 1rem; /* Tamanho da fonte */
+    padding: .4rem .8rem; /* Espaçamento interno */
+    border-radius: 50%; /* Borda arredondada em forma de círculo */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    display: flex; /* Define o layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: 400ms; /* Transição suave */
+}
+
+#btn-ok:hover {
+    /* Estilização do botão de confirmação ao passar o cursor */
+    background-color: var(--color-red2); /* Cor de fundo ao passar o cursor */
+}
