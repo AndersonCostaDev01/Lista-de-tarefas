@@ -1,16 +1,16 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Função responsável por abrir o formulário de tarefas
-    $('header button').click(function() {
+    $('header button').click(function () {
         $('form').slideDown(1000);
     });
 
     // Função responsável por fechar o formulário de tarefas
-    $('#cancel').click(function() {
+    $('#cancel').click(function () {
         $('form').slideUp();
     });
 
     // Incluir nova tarefa no HTML
-    $('form').on("submit", function(e) {
+    $('form').on("submit", function (e) {
         // Previne o comportamento padrão do formulário
         e.preventDefault();
 
@@ -36,8 +36,8 @@ $(document).ready(function() {
     });
 
     // Função para excluir uma tarefa
-    $('ul').on('click', '.delete', function() {
-        $(this).parent().slideUp(function() {
+    $('ul').on('click', '.delete', function () {
+        $(this).parent().slideUp(function () {
             $(this).remove();
         });
     });
